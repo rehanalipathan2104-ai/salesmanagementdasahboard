@@ -1,0 +1,501 @@
+Order ID,Product Name,Category,Sales Amount,Profit,Quantity Sold,Order Date,Customer Location
+1001,Wireless Mouse,Electronics,25.0,7.0,2,2024-03-12,Chicago
+1002,Office Chair,Furniture,180.0,45.0,1,2024-03-13,Austin
+1003,Coffee Maker,Appliances,75.0,20.0,1,2024-03-14,Seattle
+1004,Coffee Maker Programmable,Appliances,225,63.78,3,2023-09-08,Detroit
+1005,Bluetooth Portable Speaker,Electronics,60,17.23,1,2023-04-06,Chicago
+1006,Blender Pro High-Speed,Appliances,180,50.16,2,2024-03-05,Chicago
+1007,Denim Slim Jeans,Clothing,130,44.6,2,2023-12-15,New York
+1008,Mechanical Keyboard,Electronics,85,32.03,1,2023-12-19,Detroit
+1009,Bluetooth Portable Speaker,Electronics,60,23.46,1,2023-10-28,Phoenix
+1010,Blender Pro High-Speed,Appliances,90,31.54,1,2023-08-22,Atlanta
+1011,Waterproof Winter Jacket,Clothing,160,43.9,1,2024-01-09,Denver
+1012,Blender Pro High-Speed,Appliances,180,57.5,2,2023-06-25,Minneapolis
+1013,Modern Coffee Table,Furniture,300,-11.7,2,2023-02-27,Denver
+1014,Gaming Mousepad XL,Electronics,120,57.5,6,2023-11-19,Minneapolis
+1015,Noise-Cancelling Headphones,Electronics,199,86.46,1,2023-09-27,Charlotte
+1016,Modern Coffee Table,Furniture,1200,391.71,8,2023-05-22,Austin
+1017,Denim Slim Jeans,Clothing,130,54.51,2,2024-03-08,Salt Lake City
+1018,Mineral Sunscreen SPF 50,Beauty,28,15.39,1,2023-01-12,Detroit
+1019,Wool Blend Overcoat,Clothing,380,101.44,2,2023-04-25,Chicago
+1020,Exfoliating Body Scrub,Beauty,26,15.66,1,2024-05-27,New York
+1021,Hooded Fleece Sweatshirt,Clothing,135,61.23,3,2024-06-03,San Francisco
+1022,Office Chair Ergonomic,Furniture,360,73.05,2,2024-05-15,Boston
+1023,Smart Watch Series 5,Electronics,996,232.77,4,2023-03-22,Seattle
+1024,Mineral Sunscreen SPF 50,Beauty,84,45.79,3,2023-05-12,San Francisco
+1025,Gaming Mousepad XL,Electronics,20,11.72,1,2023-08-05,Dallas
+1026,Stainless Steel Microwave,Appliances,1120,282.88,8,2024-01-18,New York
+1027,Mechanical Keyboard,Electronics,85,1.02,1,2023-08-24,Austin
+1028,Wireless Mouse,Electronics,75,26.46,3,2023-03-14,Portland
+1029,Noise-Cancelling Headphones,Electronics,398,136.81,2,2024-04-29,San Diego
+1030,Mechanical Keyboard,Electronics,170,57.13,2,2023-12-29,New York
+1031,USB-C Hub Multiport Adapter,Electronics,135,53.96,3,2023-04-22,Minneapolis
+1032,Noise-Cancelling Headphones,Electronics,199,91.02,1,2023-09-13,Detroit
+1033,Webcam 1080p Pro,Electronics,210,101.91,3,2023-04-06,San Francisco
+1034,Monitor Riser Bamboo,Furniture,35,16.99,1,2024-02-15,Chicago
+1035,Organic Herbal Shampoo,Beauty,88,40.98,4,2024-04-10,Detroit
+1036,Stainless Steel Microwave,Appliances,140,2.19,1,2023-10-31,Austin
+1037,Classic Oxford Cotton Shirt,Clothing,55,24.78,1,2024-05-03,San Francisco
+1038,Webcam 1080p Pro,Electronics,70,21.96,1,2023-07-10,Atlanta
+1039,Modern Coffee Table,Furniture,300,102.87,2,2023-02-10,Charlotte
+1040,Robotic Vacuum Cleaner,Appliances,1040,270.78,4,2023-07-29,Denver
+1041,Leather Recliner Armchair,Furniture,760,114.92,2,2023-03-16,Charlotte
+1042,Hydrating Face Serum,Beauty,76,38.23,2,2024-06-02,Seattle
+1043,Hooded Fleece Sweatshirt,Clothing,45,22.13,1,2024-03-24,Salt Lake City
+1044,Ionic Hair Dryer Salon Pro,Beauty,240,84.04,2,2023-01-09,New York
+1045,Vitamin C Day Cream,Beauty,32,17.55,1,2023-04-20,Boston
+1046,Blender Pro High-Speed,Appliances,90,28.41,1,2023-09-28,Austin
+1047,Bluetooth Portable Speaker,Electronics,180,45.11,3,2023-02-15,Denver
+1048,External SSD 1TB,Electronics,220,62.51,2,2024-03-13,Los Angeles
+1049,Toaster 4-Slice Stainless,Appliances,50,-1.63,1,2023-06-01,Austin
+1050,Vitamin C Day Cream,Beauty,64,30.13,2,2023-04-16,San Diego
+1051,Exfoliating Body Scrub,Beauty,26,16.2,1,2023-08-31,San Francisco
+1052,Hydrating Face Serum,Beauty,38,20.23,1,2023-12-07,Atlanta
+1053,Mechanical Keyboard,Electronics,85,32.56,1,2023-02-09,Minneapolis
+1054,Modern Coffee Table,Furniture,150,46.47,1,2023-07-17,Seattle
+1055,Organic Herbal Shampoo,Beauty,22,10.65,1,2024-06-05,Detroit
+1056,Office Chair Ergonomic,Furniture,180,40.82,1,2023-09-25,Denver
+1057,Gaming Mousepad XL,Electronics,20,11.94,1,2023-11-18,Charlotte
+1058,Wireless Mouse,Electronics,50,17.7,2,2023-01-02,Dallas
+1059,Standing Desk Dual Motor,Furniture,1680,436.14,4,2023-12-05,Boston
+1060,Minimalist Bedside Table,Furniture,75,26.82,1,2023-10-30,Philadelphia
+1061,Air Fryer Digital 6-Quart,Appliances,220,72.24,2,2023-11-05,Dallas
+1062,Filing Cabinet 3-Drawer,Furniture,190,63.57,2,2024-03-28,San Francisco
+1063,Robotic Vacuum Cleaner,Appliances,780,203.37,3,2023-12-10,Dallas
+1064,Wireless Mouse,Electronics,25,9.31,1,2024-05-01,Minneapolis
+1065,Modern Coffee Table,Furniture,300,97.25,2,2024-01-29,Chicago
+1066,Ionic Hair Dryer Salon Pro,Beauty,360,132.03,3,2023-04-20,Nashville
+1067,Modern Coffee Table,Furniture,600,191.08,4,2023-05-05,Nashville
+1068,Mineral Sunscreen SPF 50,Beauty,28,14.97,1,2024-03-29,Nashville
+1069,Monitor Riser Bamboo,Furniture,140,58.45,4,2024-05-01,Denver
+1070,Athletic Running Shoes,Clothing,190,62.07,2,2023-09-02,Boston
+1071,USB-C Hub Multiport Adapter,Electronics,45,17.0,1,2023-03-24,Los Angeles
+1072,Coffee Maker Programmable,Appliances,75,23.43,1,2023-12-05,San Diego
+1073,Office Chair Ergonomic,Furniture,540,146.64,3,2024-01-25,Boston
+1074,Wool Blend Overcoat,Clothing,760,232.65,4,2024-03-05,Salt Lake City
+1075,Matte Long-Wear Lipstick,Beauty,24,14.33,1,2024-03-22,Philadelphia
+1076,Wool Blend Overcoat,Clothing,380,143.23,2,2023-05-11,Philadelphia
+1077,Blender Pro High-Speed,Appliances,90,24.09,1,2024-03-14,Austin
+1078,USB-C Hub Multiport Adapter,Electronics,45,23.67,1,2023-12-01,San Diego
+1079,Mechanical Keyboard,Electronics,170,68.0,2,2023-02-23,Seattle
+1080,Casual Canvas Sneakers,Clothing,60,28.32,1,2023-02-01,Chicago
+1081,Air Fryer Digital 6-Quart,Appliances,110,32.26,1,2023-04-28,Denver
+1082,Denim Slim Jeans,Clothing,130,59.22,2,2023-04-28,Boston
+1083,Wireless Mouse,Electronics,100,32.93,4,2024-01-20,Seattle
+1084,Toaster 4-Slice Stainless,Appliances,100,37.76,2,2023-04-15,Salt Lake City
+1085,Wool Blend Overcoat,Clothing,1520,418.84,8,2023-02-12,Phoenix
+1086,USB-C Hub Multiport Adapter,Electronics,45,23.15,1,2024-03-06,Phoenix
+1087,Toaster 4-Slice Stainless,Appliances,100,34.1,2,2023-06-06,Denver
+1088,Electric Kettle Fast-Boil,Appliances,120,43.84,3,2024-04-21,Denver
+1089,Modern Coffee Table,Furniture,450,131.33,3,2023-03-30,Minneapolis
+1090,Blender Pro High-Speed,Appliances,90,28.28,1,2023-01-30,Portland
+1091,4K Ultra HD Monitor 27-inch,Electronics,320,82.5,1,2023-10-10,Dallas
+1092,Bluetooth Portable Speaker,Electronics,120,44.09,2,2023-09-04,Portland
+1093,Office Chair Ergonomic,Furniture,180,46.92,1,2023-08-15,Charlotte
+1094,Filing Cabinet 3-Drawer,Furniture,95,28.83,1,2023-12-05,Atlanta
+1095,Smart Watch Series 5,Electronics,249,62.41,1,2023-07-09,Denver
+1096,Wool Blend Overcoat,Clothing,380,143.22,2,2023-10-17,Boston
+1097,Noise-Cancelling Headphones,Electronics,199,-14.51,1,2024-06-30,Boston
+1098,Air Fryer Digital 6-Quart,Appliances,220,-9.47,2,2024-05-17,Portland
+1099,Bookshelf 5-Tier Wood,Furniture,650,228.64,5,2023-09-16,Seattle
+1100,Standing Desk Dual Motor,Furniture,840,166.49,2,2023-02-24,Boston
+1101,Smart Watch Series 5,Electronics,249,78.94,1,2024-03-02,Atlanta
+1102,Waterproof Winter Jacket,Clothing,320,94.27,2,2024-03-29,San Diego
+1103,Gaming Mousepad XL,Electronics,20,11.79,1,2023-04-12,Dallas
+1104,Mechanical Keyboard,Electronics,85,29.43,1,2023-06-27,San Diego
+1105,Monitor Riser Bamboo,Furniture,35,13.76,1,2023-08-26,Minneapolis
+1106,Smart Watch Series 5,Electronics,996,286.87,4,2023-07-22,Los Angeles
+1107,Ionic Hair Dryer Salon Pro,Beauty,120,32.99,1,2023-03-03,Charlotte
+1108,Matte Long-Wear Lipstick,Beauty,24,16.52,1,2023-11-08,Portland
+1109,Office Chair Ergonomic,Furniture,720,146.79,4,2023-11-27,Charlotte
+1110,Coffee Maker Programmable,Appliances,600,201.86,8,2023-10-03,San Francisco
+1111,Monitor Riser Bamboo,Furniture,140,69.94,4,2023-07-05,Portland
+1112,Matte Long-Wear Lipstick,Beauty,24,12.5,1,2023-12-08,San Diego
+1113,Robotic Vacuum Cleaner,Appliances,520,144.37,2,2024-02-15,Minneapolis
+1114,4K Ultra HD Monitor 27-inch,Electronics,320,96.35,1,2024-02-18,Chicago
+1115,Electric Kettle Fast-Boil,Appliances,80,26.25,2,2023-02-25,Portland
+1116,Toaster 4-Slice Stainless,Appliances,50,17.84,1,2023-10-01,Minneapolis
+1117,Matte Long-Wear Lipstick,Beauty,24,15.41,1,2023-09-03,Chicago
+1118,Coffee Maker Programmable,Appliances,75,23.94,1,2023-04-27,Los Angeles
+1119,Leather Recliner Armchair,Furniture,760,155.05,2,2023-10-07,Portland
+1120,Webcam 1080p Pro,Electronics,70,33.91,1,2023-07-15,Los Angeles
+1121,Hooded Fleece Sweatshirt,Clothing,135,55.05,3,2024-02-29,Denver
+1122,Hooded Fleece Sweatshirt,Clothing,90,44.74,2,2024-05-16,Portland
+1123,Minimalist Bedside Table,Furniture,150,62.6,2,2023-11-26,Philadelphia
+1124,Bluetooth Portable Speaker,Electronics,60,22.19,1,2024-04-29,Philadelphia
+1125,Ionic Hair Dryer Salon Pro,Beauty,360,-5.29,3,2023-06-05,Charlotte
+1126,Standing Desk Dual Motor,Furniture,1680,322.5,4,2024-03-26,Chicago
+1127,Waterproof Winter Jacket,Clothing,640,167.18,4,2023-06-08,Denver
+1128,Minimalist Bedside Table,Furniture,150,60.05,2,2023-12-03,Miami
+1129,Toaster 4-Slice Stainless,Appliances,100,36.64,2,2023-02-06,Boston
+1130,Exfoliating Body Scrub,Beauty,26,15.65,1,2023-04-11,New York
+1131,Leather Recliner Armchair,Furniture,1520,-50.77,4,2023-02-17,San Diego
+1132,Webcam 1080p Pro,Electronics,70,23.38,1,2023-07-04,Philadelphia
+1133,Air Fryer Digital 6-Quart,Appliances,220,55.04,2,2023-05-27,Minneapolis
+1134,Wireless Mouse,Electronics,100,43.02,4,2024-04-21,San Francisco
+1135,USB-C Hub Multiport Adapter,Electronics,360,156.55,8,2023-11-03,Boston
+1136,Bluetooth Portable Speaker,Electronics,180,52.26,3,2023-04-20,Charlotte
+1137,4K Ultra HD Monitor 27-inch,Electronics,320,69.9,1,2024-02-10,Austin
+1138,Exfoliating Body Scrub,Beauty,52,31.47,2,2023-10-21,Phoenix
+1139,Smart Watch Series 5,Electronics,498,159.62,2,2023-05-21,Austin
+1140,External SSD 1TB,Electronics,110,34.08,1,2024-01-09,Boston
+1141,Minimalist Bedside Table,Furniture,75,29.26,1,2023-05-16,Phoenix
+1142,Leather Recliner Armchair,Furniture,1140,306.46,3,2023-09-21,Boston
+1143,Hooded Fleece Sweatshirt,Clothing,135,69.35,3,2024-04-24,Atlanta
+1144,Casual Canvas Sneakers,Clothing,120,56.97,2,2024-02-11,Phoenix
+1145,Bluetooth Portable Speaker,Electronics,60,19.64,1,2023-05-07,Denver
+1146,Toaster 4-Slice Stainless,Appliances,100,29.52,2,2024-01-16,Chicago
+1147,Electric Kettle Fast-Boil,Appliances,40,15.89,1,2023-08-15,Minneapolis
+1148,Organic Herbal Shampoo,Beauty,44,19.46,2,2023-04-30,Boston
+1149,Hydrating Face Serum,Beauty,38,20.05,1,2023-05-19,Detroit
+1150,Bookshelf 5-Tier Wood,Furniture,520,175.09,4,2023-04-12,Denver
+1151,USB-C Hub Multiport Adapter,Electronics,45,24.3,1,2024-03-31,New York
+1152,Organic Herbal Shampoo,Beauty,44,18.91,2,2024-01-03,New York
+1153,Ionic Hair Dryer Salon Pro,Beauty,240,83.1,2,2023-08-06,Chicago
+1154,USB-C Hub Multiport Adapter,Electronics,45,22.83,1,2023-05-09,Detroit
+1155,Smart Watch Series 5,Electronics,747,203.61,3,2023-08-27,Salt Lake City
+1156,Noise-Cancelling Headphones,Electronics,1592,706.42,8,2023-09-14,Chicago
+1157,USB-C Hub Multiport Adapter,Electronics,135,-6.14,3,2023-09-01,Los Angeles
+1158,Athletic Running Shoes,Clothing,95,34.29,1,2023-03-07,Nashville
+1159,Stainless Steel Microwave,Appliances,280,80.44,2,2023-02-14,Nashville
+1160,Wireless Mouse,Electronics,25,10.49,1,2024-05-05,New York
+1161,Monitor Riser Bamboo,Furniture,35,13.94,1,2023-03-24,Los Angeles
+1162,Gaming Mousepad XL,Electronics,40,20.78,2,2023-11-29,Nashville
+1163,Coffee Maker Programmable,Appliances,225,85.03,3,2023-04-28,Detroit
+1164,Denim Slim Jeans,Clothing,65,24.88,1,2023-08-22,Philadelphia
+1165,Standing Desk Dual Motor,Furniture,420,94.46,1,2023-11-17,Portland
+1166,Mechanical Keyboard,Electronics,85,31.39,1,2023-04-09,Los Angeles
+1167,Electric Kettle Fast-Boil,Appliances,200,72.32,5,2023-12-04,San Diego
+1168,Casual Canvas Sneakers,Clothing,60,24.96,1,2023-10-22,Charlotte
+1169,Bookshelf 5-Tier Wood,Furniture,260,88.04,2,2023-08-18,Detroit
+1170,Leather Recliner Armchair,Furniture,760,197.5,2,2024-03-15,Salt Lake City
+1171,Blender Pro High-Speed,Appliances,180,45.68,2,2023-10-01,Boston
+1172,Organic Herbal Shampoo,Beauty,22,11.23,1,2023-05-27,Los Angeles
+1173,Classic Oxford Cotton Shirt,Clothing,55,21.62,1,2024-06-27,Miami
+1174,4K Ultra HD Monitor 27-inch,Electronics,640,194.35,2,2023-03-28,Salt Lake City
+1175,Mechanical Keyboard,Electronics,85,28.75,1,2024-03-10,Denver
+1176,Webcam 1080p Pro,Electronics,70,22.55,1,2024-03-16,Charlotte
+1177,Leather Recliner Armchair,Furniture,380,-20.3,1,2024-02-09,Dallas
+1178,Wool Blend Overcoat,Clothing,570,193.53,3,2023-12-02,Philadelphia
+1179,Modern Coffee Table,Furniture,450,141.94,3,2023-12-29,Seattle
+1180,Athletic Running Shoes,Clothing,95,38.06,1,2024-02-19,New York
+1181,Filing Cabinet 3-Drawer,Furniture,95,33.87,1,2024-04-16,Seattle
+1182,Standing Desk Dual Motor,Furniture,420,102.01,1,2024-02-15,Boston
+1183,Denim Slim Jeans,Clothing,65,20.49,1,2023-06-22,Nashville
+1184,Filing Cabinet 3-Drawer,Furniture,95,25.94,1,2023-06-01,Dallas
+1185,Noise-Cancelling Headphones,Electronics,597,198.14,3,2023-03-19,Portland
+1186,Monitor Riser Bamboo,Furniture,70,31.09,2,2023-11-27,Seattle
+1187,Leather Recliner Armchair,Furniture,1140,223.16,3,2023-02-27,Minneapolis
+1188,Office Chair Ergonomic,Furniture,180,38.07,1,2023-10-21,Seattle
+1189,Electric Kettle Fast-Boil,Appliances,40,14.7,1,2023-02-12,Dallas
+1190,Monitor Riser Bamboo,Furniture,70,29.23,2,2023-03-05,Miami
+1191,Hydrating Face Serum,Beauty,76,34.79,2,2023-06-26,Minneapolis
+1192,Bookshelf 5-Tier Wood,Furniture,130,35.65,1,2023-10-17,Salt Lake City
+1193,USB-C Hub Multiport Adapter,Electronics,45,20.77,1,2023-04-07,Denver
+1194,Casual Canvas Sneakers,Clothing,300,112.0,5,2023-06-03,Los Angeles
+1195,Organic Herbal Shampoo,Beauty,110,48.47,5,2024-02-06,Seattle
+1196,Bluetooth Portable Speaker,Electronics,120,43.67,2,2023-12-03,Nashville
+1197,Bluetooth Portable Speaker,Electronics,120,37.4,2,2023-01-19,Dallas
+1198,Monitor Riser Bamboo,Furniture,35,13.06,1,2023-05-21,New York
+1199,Office Chair Ergonomic,Furniture,360,104.25,2,2023-05-15,San Francisco
+1200,Wool Blend Overcoat,Clothing,380,-12.4,2,2023-06-19,Atlanta
+1201,Mineral Sunscreen SPF 50,Beauty,28,12.64,1,2024-04-04,Portland
+1202,Vitamin C Day Cream,Beauty,32,15.75,1,2024-03-27,Philadelphia
+1203,Minimalist Bedside Table,Furniture,375,147.07,5,2023-07-24,Denver
+1204,External SSD 1TB,Electronics,440,134.95,4,2023-04-16,New York
+1205,Noise-Cancelling Headphones,Electronics,199,64.98,1,2024-06-09,Atlanta
+1206,Hooded Fleece Sweatshirt,Clothing,180,64.63,4,2024-02-29,Atlanta
+1207,Standing Desk Dual Motor,Furniture,420,91.66,1,2023-01-29,Miami
+1208,Denim Slim Jeans,Clothing,65,28.55,1,2024-04-28,Portland
+1209,Office Chair Ergonomic,Furniture,720,171.64,4,2023-01-20,Detroit
+1210,Mineral Sunscreen SPF 50,Beauty,56,31.96,2,2023-04-24,New York
+1211,Bluetooth Portable Speaker,Electronics,120,31.28,2,2024-04-13,Portland
+1212,Coffee Maker Programmable,Appliances,150,53.67,2,2023-09-05,Chicago
+1213,Air Fryer Digital 6-Quart,Appliances,220,67.4,2,2023-07-11,Phoenix
+1214,Webcam 1080p Pro,Electronics,140,57.52,2,2024-06-03,Portland
+1215,Bluetooth Portable Speaker,Electronics,480,180.98,8,2023-09-17,Seattle
+1216,Standing Desk Dual Motor,Furniture,2100,515.6,5,2023-12-07,San Francisco
+1217,Casual Canvas Sneakers,Clothing,120,50.53,2,2024-05-05,Seattle
+1218,Stainless Steel Microwave,Appliances,140,28.74,1,2023-07-26,Austin
+1219,4K Ultra HD Monitor 27-inch,Electronics,640,137.9,2,2024-04-29,Dallas
+1220,Wireless Mouse,Electronics,75,30.74,3,2023-12-06,Philadelphia
+1221,Waterproof Winter Jacket,Clothing,160,51.91,1,2023-07-11,Nashville
+1222,Mechanical Keyboard,Electronics,170,56.38,2,2023-03-22,San Francisco
+1223,Robotic Vacuum Cleaner,Appliances,260,56.36,1,2023-12-02,San Diego
+1224,External SSD 1TB,Electronics,110,33.99,1,2023-02-13,Salt Lake City
+1225,Organic Herbal Shampoo,Beauty,44,19.01,2,2023-02-28,Phoenix
+1226,Bookshelf 5-Tier Wood,Furniture,650,220.23,5,2023-05-27,Minneapolis
+1227,Mechanical Keyboard,Electronics,85,27.49,1,2024-01-11,Austin
+1228,Blender Pro High-Speed,Appliances,90,26.85,1,2024-01-15,Charlotte
+1229,USB-C Hub Multiport Adapter,Electronics,45,18.0,1,2023-10-13,San Francisco
+1230,Minimalist Bedside Table,Furniture,300,94.99,4,2023-05-01,Minneapolis
+1231,Gaming Mousepad XL,Electronics,20,8.8,1,2024-05-17,Seattle
+1232,Monitor Riser Bamboo,Furniture,280,127.8,8,2023-11-24,Boston
+1233,Ionic Hair Dryer Salon Pro,Beauty,120,44.29,1,2023-06-28,New York
+1234,Ionic Hair Dryer Salon Pro,Beauty,120,30.47,1,2024-05-20,Phoenix
+1235,Bookshelf 5-Tier Wood,Furniture,260,59.59,2,2023-03-30,Portland
+1236,Minimalist Bedside Table,Furniture,225,66.95,3,2023-03-17,Seattle
+1237,Filing Cabinet 3-Drawer,Furniture,95,33.01,1,2023-07-06,Nashville
+1238,Hydrating Face Serum,Beauty,114,54.79,3,2024-06-14,Miami
+1239,Vitamin C Day Cream,Beauty,32,18.53,1,2024-06-15,Denver
+1240,Webcam 1080p Pro,Electronics,70,22.31,1,2023-11-07,Charlotte
+1241,Vitamin C Day Cream,Beauty,32,16.41,1,2023-12-12,Chicago
+1242,Gaming Mousepad XL,Electronics,20,11.07,1,2023-08-04,Chicago
+1243,Leather Recliner Armchair,Furniture,760,193.5,2,2023-11-06,Boston
+1244,Office Chair Ergonomic,Furniture,180,49.07,1,2024-03-01,Salt Lake City
+1245,USB-C Hub Multiport Adapter,Electronics,135,50.78,3,2023-12-20,Detroit
+1246,Smart Watch Series 5,Electronics,498,145.38,2,2023-10-01,Austin
+1247,Bluetooth Portable Speaker,Electronics,180,52.6,3,2024-03-04,San Francisco
+1248,Athletic Running Shoes,Clothing,190,77.85,2,2023-07-14,Nashville
+1249,Leather Recliner Armchair,Furniture,760,207.39,2,2023-04-03,Atlanta
+1250,USB-C Hub Multiport Adapter,Electronics,45,20.2,1,2023-10-16,Portland
+1251,Wireless Mouse,Electronics,75,20.76,3,2024-03-17,Phoenix
+1252,Hooded Fleece Sweatshirt,Clothing,45,20.11,1,2023-02-22,Detroit
+1253,Bluetooth Portable Speaker,Electronics,120,46.84,2,2023-10-14,Salt Lake City
+1254,Mechanical Keyboard,Electronics,85,27.53,1,2023-12-14,Salt Lake City
+1255,Office Chair Ergonomic,Furniture,180,55.27,1,2023-05-21,Nashville
+1256,Bookshelf 5-Tier Wood,Furniture,390,118.22,3,2023-11-23,Nashville
+1257,Leather Recliner Armchair,Furniture,760,150.39,2,2023-01-18,San Diego
+1258,Toaster 4-Slice Stainless,Appliances,200,72.71,4,2023-01-28,Charlotte
+1259,Blender Pro High-Speed,Appliances,90,24.49,1,2024-05-06,Salt Lake City
+1260,Waterproof Winter Jacket,Clothing,160,40.76,1,2023-09-06,New York
+1261,External SSD 1TB,Electronics,110,28.81,1,2023-06-05,Nashville
+1262,Waterproof Winter Jacket,Clothing,640,227.75,4,2023-03-05,Detroit
+1263,Monitor Riser Bamboo,Furniture,70,29.33,2,2023-11-18,Detroit
+1264,Leather Recliner Armchair,Furniture,760,208.58,2,2023-07-16,Boston
+1265,4K Ultra HD Monitor 27-inch,Electronics,960,265.57,3,2023-08-01,Portland
+1266,Leather Recliner Armchair,Furniture,380,101.25,1,2024-01-24,Phoenix
+1267,Ionic Hair Dryer Salon Pro,Beauty,120,35.18,1,2023-02-13,Phoenix
+1268,Exfoliating Body Scrub,Beauty,26,12.81,1,2024-05-05,Denver
+1269,Exfoliating Body Scrub,Beauty,26,14.9,1,2023-04-22,Atlanta
+1270,Webcam 1080p Pro,Electronics,70,21.73,1,2023-08-27,Portland
+1271,Noise-Cancelling Headphones,Electronics,199,74.28,1,2023-06-11,Portland
+1272,Modern Coffee Table,Furniture,450,134.18,3,2023-10-22,Seattle
+1273,Air Fryer Digital 6-Quart,Appliances,220,74.52,2,2023-02-08,San Francisco
+1274,Hydrating Face Serum,Beauty,304,184.71,8,2024-02-11,Boston
+1275,Classic Oxford Cotton Shirt,Clothing,55,29.46,1,2023-04-20,Minneapolis
+1276,Mineral Sunscreen SPF 50,Beauty,56,32.89,2,2023-05-18,Dallas
+1277,Hooded Fleece Sweatshirt,Clothing,45,20.71,1,2024-04-14,Chicago
+1278,Wool Blend Overcoat,Clothing,190,47.14,1,2023-07-17,Philadelphia
+1279,Athletic Running Shoes,Clothing,95,37.41,1,2024-02-15,Los Angeles
+1280,Modern Coffee Table,Furniture,150,42.8,1,2024-01-28,Miami
+1281,Gaming Mousepad XL,Electronics,20,10.77,1,2024-01-04,New York
+1282,Bookshelf 5-Tier Wood,Furniture,130,45.4,1,2024-05-29,Boston
+1283,Blender Pro High-Speed,Appliances,360,107.2,4,2023-10-30,Los Angeles
+1284,Monitor Riser Bamboo,Furniture,105,43.3,3,2024-01-18,Portland
+1285,Wool Blend Overcoat,Clothing,380,129.92,2,2023-08-12,Salt Lake City
+1286,Classic Oxford Cotton Shirt,Clothing,110,53.98,2,2024-06-24,Charlotte
+1287,Webcam 1080p Pro,Electronics,280,116.07,4,2023-07-27,Miami
+1288,Waterproof Winter Jacket,Clothing,160,57.21,1,2023-07-30,Nashville
+1289,Office Chair Ergonomic,Furniture,360,94.43,2,2024-06-09,Detroit
+1290,Leather Recliner Armchair,Furniture,760,-39.27,2,2024-02-10,Seattle
+1291,USB-C Hub Multiport Adapter,Electronics,90,48.32,2,2023-03-03,Portland
+1292,Bluetooth Portable Speaker,Electronics,60,22.81,1,2023-05-19,San Diego
+1293,Minimalist Bedside Table,Furniture,75,24.94,1,2024-01-22,Detroit
+1294,USB-C Hub Multiport Adapter,Electronics,45,20.51,1,2024-02-07,Atlanta
+1295,Wool Blend Overcoat,Clothing,190,63.66,1,2023-11-02,Philadelphia
+1296,Denim Slim Jeans,Clothing,130,46.17,2,2023-06-08,New York
+1297,Bluetooth Portable Speaker,Electronics,120,34.91,2,2023-01-17,Salt Lake City
+1298,Gaming Mousepad XL,Electronics,40,-0.92,2,2023-02-19,Detroit
+1299,Wireless Mouse,Electronics,25,7.42,1,2023-10-24,Charlotte
+1300,Gaming Mousepad XL,Electronics,80,47.77,4,2023-11-25,San Diego
+1301,Wireless Mouse,Electronics,50,18.76,2,2023-06-29,Portland
+1302,USB-C Hub Multiport Adapter,Electronics,180,91.29,4,2024-01-26,San Diego
+1303,Leather Recliner Armchair,Furniture,380,68.9,1,2024-04-29,Los Angeles
+1304,Classic Oxford Cotton Shirt,Clothing,110,50.76,2,2024-03-02,Atlanta
+1305,USB-C Hub Multiport Adapter,Electronics,90,46.75,2,2024-04-05,Dallas
+1306,Bluetooth Portable Speaker,Electronics,120,47.82,2,2023-02-10,Charlotte
+1307,Athletic Running Shoes,Clothing,95,40.64,1,2023-08-02,Chicago
+1308,Smart Watch Series 5,Electronics,1245,422.68,5,2023-05-01,Atlanta
+1309,Blender Pro High-Speed,Appliances,90,28.96,1,2023-09-03,Philadelphia
+1310,Filing Cabinet 3-Drawer,Furniture,95,29.62,1,2024-01-04,New York
+1311,Casual Canvas Sneakers,Clothing,120,45.52,2,2023-11-24,Charlotte
+1312,Casual Canvas Sneakers,Clothing,60,24.51,1,2023-09-25,San Diego
+1313,Smart Watch Series 5,Electronics,249,77.48,1,2024-01-24,Detroit
+1314,Blender Pro High-Speed,Appliances,90,33.81,1,2024-05-15,Portland
+1315,Filing Cabinet 3-Drawer,Furniture,95,25.25,1,2024-05-15,Austin
+1316,Standing Desk Dual Motor,Furniture,1680,456.49,4,2023-02-19,Atlanta
+1317,Noise-Cancelling Headphones,Electronics,199,76.03,1,2024-06-01,Salt Lake City
+1318,Exfoliating Body Scrub,Beauty,52,28.94,2,2023-01-07,Chicago
+1319,Leather Recliner Armchair,Furniture,760,115.69,2,2023-10-21,San Diego
+1320,Denim Slim Jeans,Clothing,65,26.32,1,2023-04-09,Salt Lake City
+1321,Filing Cabinet 3-Drawer,Furniture,95,23.85,1,2024-02-11,Minneapolis
+1322,Blender Pro High-Speed,Appliances,90,30.15,1,2023-03-24,Austin
+1323,Bluetooth Portable Speaker,Electronics,60,-3.46,1,2024-05-02,Portland
+1324,Casual Canvas Sneakers,Clothing,180,83.37,3,2023-04-08,Atlanta
+1325,Gaming Mousepad XL,Electronics,40,23.39,2,2023-02-17,Denver
+1326,Mineral Sunscreen SPF 50,Beauty,56,33.84,2,2023-07-03,Dallas
+1327,Toaster 4-Slice Stainless,Appliances,150,61.51,3,2024-02-12,Charlotte
+1328,Bluetooth Portable Speaker,Electronics,120,45.09,2,2023-12-06,Seattle
+1329,Filing Cabinet 3-Drawer,Furniture,95,25.89,1,2024-03-23,Salt Lake City
+1330,Athletic Running Shoes,Clothing,285,117.76,3,2023-12-01,Atlanta
+1331,Minimalist Bedside Table,Furniture,75,21.9,1,2024-01-25,Atlanta
+1332,Coffee Maker Programmable,Appliances,75,26.76,1,2024-01-25,Philadelphia
+1333,Mechanical Keyboard,Electronics,85,31.57,1,2023-11-12,Seattle
+1334,External SSD 1TB,Electronics,220,-7.48,2,2024-06-08,Seattle
+1335,Toaster 4-Slice Stainless,Appliances,50,14.09,1,2024-01-30,Seattle
+1336,Athletic Running Shoes,Clothing,380,143.35,4,2023-09-06,Philadelphia
+1337,4K Ultra HD Monitor 27-inch,Electronics,320,64.14,1,2024-05-19,Denver
+1338,Monitor Riser Bamboo,Furniture,105,40.71,3,2024-01-05,Portland
+1339,Air Fryer Digital 6-Quart,Appliances,220,57.11,2,2023-05-19,Miami
+1340,Waterproof Winter Jacket,Clothing,480,151.0,3,2023-12-04,Salt Lake City
+1341,USB-C Hub Multiport Adapter,Electronics,90,40.12,2,2023-07-25,Philadelphia
+1342,Organic Herbal Shampoo,Beauty,66,37.94,3,2024-05-17,Miami
+1343,Minimalist Bedside Table,Furniture,75,27.22,1,2023-07-24,Detroit
+1344,External SSD 1TB,Electronics,440,116.94,4,2023-08-03,Seattle
+1345,Wool Blend Overcoat,Clothing,570,138.09,3,2024-05-26,Denver
+1346,Blender Pro High-Speed,Appliances,90,23.37,1,2024-01-22,Portland
+1347,Electric Kettle Fast-Boil,Appliances,80,30.52,2,2024-03-04,Phoenix
+1348,Toaster 4-Slice Stainless,Appliances,100,29.53,2,2023-03-29,Phoenix
+1349,Gaming Mousepad XL,Electronics,20,11.87,1,2024-02-14,San Diego
+1350,Mechanical Keyboard,Electronics,85,31.42,1,2024-06-06,Charlotte
+1351,USB-C Hub Multiport Adapter,Electronics,45,17.11,1,2024-05-27,Portland
+1352,Bluetooth Portable Speaker,Electronics,240,64.74,4,2023-03-29,Los Angeles
+1353,Filing Cabinet 3-Drawer,Furniture,190,59.46,2,2023-07-31,New York
+1354,Monitor Riser Bamboo,Furniture,70,24.74,2,2023-11-04,New York
+1355,Air Fryer Digital 6-Quart,Appliances,440,126.31,4,2023-09-07,Miami
+1356,Stainless Steel Microwave,Appliances,140,38.58,1,2024-02-19,San Diego
+1357,Modern Coffee Table,Furniture,150,46.25,1,2024-03-15,Dallas
+1358,Mechanical Keyboard,Electronics,170,55.06,2,2023-07-11,New York
+1359,External SSD 1TB,Electronics,220,64.17,2,2023-11-17,Phoenix
+1360,Monitor Riser Bamboo,Furniture,70,30.7,2,2023-11-01,Miami
+1361,4K Ultra HD Monitor 27-inch,Electronics,320,88.67,1,2024-01-18,San Diego
+1362,Electric Kettle Fast-Boil,Appliances,40,14.92,1,2023-07-10,San Francisco
+1363,Stainless Steel Microwave,Appliances,140,33.28,1,2023-07-11,Austin
+1364,Classic Oxford Cotton Shirt,Clothing,110,56.43,2,2023-07-19,Nashville
+1365,Stainless Steel Microwave,Appliances,280,79.86,2,2024-03-01,San Francisco
+1366,Wireless Mouse,Electronics,75,23.13,3,2023-08-14,Detroit
+1367,External SSD 1TB,Electronics,220,62.14,2,2024-05-22,New York
+1368,Webcam 1080p Pro,Electronics,210,85.77,3,2024-01-11,Minneapolis
+1369,Stainless Steel Microwave,Appliances,140,33.0,1,2023-09-11,Minneapolis
+1370,Mechanical Keyboard,Electronics,85,31.71,1,2023-05-01,Charlotte
+1371,Toaster 4-Slice Stainless,Appliances,100,30.32,2,2024-03-14,Dallas
+1372,Wool Blend Overcoat,Clothing,190,59.94,1,2023-12-26,Boston
+1373,4K Ultra HD Monitor 27-inch,Electronics,1600,508.75,5,2024-06-10,New York
+1374,Bluetooth Portable Speaker,Electronics,240,95.38,4,2023-10-11,Los Angeles
+1375,USB-C Hub Multiport Adapter,Electronics,135,60.47,3,2024-02-07,Denver
+1376,Stainless Steel Microwave,Appliances,280,69.54,2,2023-04-06,Phoenix
+1377,Monitor Riser Bamboo,Furniture,35,16.81,1,2023-01-03,Seattle
+1378,Waterproof Winter Jacket,Clothing,320,120.81,2,2024-01-02,Philadelphia
+1379,Bluetooth Portable Speaker,Electronics,180,53.22,3,2024-05-21,Miami
+1380,Air Fryer Digital 6-Quart,Appliances,220,70.95,2,2024-05-11,Austin
+1381,External SSD 1TB,Electronics,110,4.9,1,2023-06-11,Dallas
+1382,Vitamin C Day Cream,Beauty,192,80.38,6,2023-11-06,Seattle
+1383,Bookshelf 5-Tier Wood,Furniture,130,42.35,1,2023-11-09,Seattle
+1384,Coffee Maker Programmable,Appliances,75,20.24,1,2023-03-21,Minneapolis
+1385,USB-C Hub Multiport Adapter,Electronics,135,65.99,3,2024-03-08,Atlanta
+1386,Standing Desk Dual Motor,Furniture,420,120.0,1,2024-01-12,Los Angeles
+1387,Blender Pro High-Speed,Appliances,90,29.09,1,2024-06-27,San Francisco
+1388,Modern Coffee Table,Furniture,300,116.4,2,2023-06-05,Minneapolis
+1389,Classic Oxford Cotton Shirt,Clothing,220,110.11,4,2023-05-24,Philadelphia
+1390,Minimalist Bedside Table,Furniture,75,23.6,1,2023-05-24,Atlanta
+1391,Electric Kettle Fast-Boil,Appliances,80,33.35,2,2023-10-19,Boston
+1392,Gaming Mousepad XL,Electronics,40,1.47,2,2024-02-06,Atlanta
+1393,Standing Desk Dual Motor,Furniture,420,102.23,1,2023-03-14,Phoenix
+1394,Vitamin C Day Cream,Beauty,32,15.14,1,2024-03-06,Portland
+1395,Ionic Hair Dryer Salon Pro,Beauty,120,30.25,1,2023-03-11,Austin
+1396,Matte Long-Wear Lipstick,Beauty,48,31.36,2,2024-05-28,Philadelphia
+1397,Webcam 1080p Pro,Electronics,140,49.77,2,2023-06-06,Nashville
+1398,Ionic Hair Dryer Salon Pro,Beauty,120,41.42,1,2023-12-01,Seattle
+1399,Bluetooth Portable Speaker,Electronics,120,31.18,2,2023-09-02,San Diego
+1400,Gaming Mousepad XL,Electronics,40,21.26,2,2023-11-13,Chicago
+1401,Blender Pro High-Speed,Appliances,90,33.65,1,2024-05-23,Denver
+1402,Noise-Cancelling Headphones,Electronics,597,257.86,3,2023-10-03,Chicago
+1403,Minimalist Bedside Table,Furniture,75,23.76,1,2023-03-07,Seattle
+1404,Filing Cabinet 3-Drawer,Furniture,95,27.69,1,2023-06-20,New York
+1405,Exfoliating Body Scrub,Beauty,52,1.64,2,2023-08-22,Chicago
+1406,External SSD 1TB,Electronics,110,24.95,1,2023-06-03,Austin
+1407,Blender Pro High-Speed,Appliances,270,75.38,3,2024-03-05,Miami
+1408,Mechanical Keyboard,Electronics,170,57.84,2,2023-05-03,San Francisco
+1409,Webcam 1080p Pro,Electronics,560,175.72,8,2024-02-15,Boston
+1410,Hooded Fleece Sweatshirt,Clothing,45,15.81,1,2024-04-12,Charlotte
+1411,Casual Canvas Sneakers,Clothing,120,45.47,2,2024-04-20,Dallas
+1412,Athletic Running Shoes,Clothing,285,87.09,3,2023-09-09,Chicago
+1413,USB-C Hub Multiport Adapter,Electronics,90,0.49,2,2023-01-10,Boston
+1414,Webcam 1080p Pro,Electronics,560,27.78,8,2024-03-05,Denver
+1415,Smart Watch Series 5,Electronics,996,284.94,4,2024-06-16,Minneapolis
+1416,Hydrating Face Serum,Beauty,76,36.23,2,2024-06-01,Seattle
+1417,Coffee Maker Programmable,Appliances,75,21.41,1,2023-05-14,Miami
+1418,Matte Long-Wear Lipstick,Beauty,48,26.61,2,2023-12-01,Dallas
+1419,Gaming Mousepad XL,Electronics,20,8.66,1,2023-04-19,San Diego
+1420,USB-C Hub Multiport Adapter,Electronics,225,99.09,5,2023-08-01,New York
+1421,4K Ultra HD Monitor 27-inch,Electronics,960,201.7,3,2023-02-11,Los Angeles
+1422,Smart Watch Series 5,Electronics,1245,376.18,5,2024-02-10,Denver
+1423,Denim Slim Jeans,Clothing,65,30.61,1,2024-02-19,Detroit
+1424,External SSD 1TB,Electronics,110,24.0,1,2023-05-24,Atlanta
+1425,Bluetooth Portable Speaker,Electronics,60,20.94,1,2023-03-28,Seattle
+1426,Mechanical Keyboard,Electronics,85,32.05,1,2024-03-30,Miami
+1427,External SSD 1TB,Electronics,110,35.56,1,2024-03-19,Chicago
+1428,Minimalist Bedside Table,Furniture,75,30.54,1,2023-08-08,Minneapolis
+1429,Hydrating Face Serum,Beauty,76,44.04,2,2023-09-09,Detroit
+1430,Standing Desk Dual Motor,Furniture,420,96.73,1,2023-05-21,Nashville
+1431,Webcam 1080p Pro,Electronics,210,95.84,3,2024-01-27,Detroit
+1432,Hooded Fleece Sweatshirt,Clothing,180,72.84,4,2024-05-29,Chicago
+1433,Smart Watch Series 5,Electronics,249,57.11,1,2023-10-15,Nashville
+1434,Modern Coffee Table,Furniture,750,215.38,5,2023-04-13,Detroit
+1435,Casual Canvas Sneakers,Clothing,60,24.73,1,2023-08-13,Philadelphia
+1436,Bookshelf 5-Tier Wood,Furniture,130,41.3,1,2023-11-22,Chicago
+1437,Robotic Vacuum Cleaner,Appliances,1040,257.48,4,2023-05-26,Portland
+1438,Air Fryer Digital 6-Quart,Appliances,220,50.01,2,2023-04-03,Chicago
+1439,Office Chair Ergonomic,Furniture,180,57.77,1,2023-07-26,San Francisco
+1440,Ionic Hair Dryer Salon Pro,Beauty,360,91.18,3,2023-03-02,Los Angeles
+1441,Wool Blend Overcoat,Clothing,380,142.0,2,2024-01-09,Philadelphia
+1442,Robotic Vacuum Cleaner,Appliances,260,77.25,1,2023-05-20,San Diego
+1443,Waterproof Winter Jacket,Clothing,320,113.94,2,2023-06-28,Salt Lake City
+1444,Denim Slim Jeans,Clothing,130,48.84,2,2023-06-29,Boston
+1445,Wireless Mouse,Electronics,100,42.02,4,2024-02-05,Charlotte
+1446,Gaming Mousepad XL,Electronics,20,10.56,1,2023-08-15,Portland
+1447,Mechanical Keyboard,Electronics,170,64.36,2,2023-11-24,Miami
+1448,Leather Recliner Armchair,Furniture,380,74.31,1,2023-03-11,Chicago
+1449,External SSD 1TB,Electronics,330,109.79,3,2023-06-20,Philadelphia
+1450,Minimalist Bedside Table,Furniture,75,29.28,1,2024-05-05,Atlanta
+1451,Mechanical Keyboard,Electronics,255,80.42,3,2023-02-04,New York
+1452,Noise-Cancelling Headphones,Electronics,796,343.68,4,2023-06-14,Seattle
+1453,Monitor Riser Bamboo,Furniture,70,34.4,2,2024-03-17,San Diego
+1454,Mechanical Keyboard,Electronics,85,27.97,1,2023-07-14,Detroit
+1455,4K Ultra HD Monitor 27-inch,Electronics,320,59.82,1,2023-04-09,Portland
+1456,USB-C Hub Multiport Adapter,Electronics,45,18.4,1,2023-03-31,Salt Lake City
+1457,Standing Desk Dual Motor,Furniture,420,107.76,1,2023-06-24,Portland
+1458,Hooded Fleece Sweatshirt,Clothing,135,58.47,3,2024-04-27,Seattle
+1459,Stainless Steel Microwave,Appliances,140,34.21,1,2024-01-26,Denver
+1460,Leather Recliner Armchair,Furniture,380,84.87,1,2023-10-03,New York
+1461,USB-C Hub Multiport Adapter,Electronics,135,73.46,3,2024-02-28,Detroit
+1462,Bluetooth Portable Speaker,Electronics,180,74.55,3,2024-03-04,Portland
+1463,Air Fryer Digital 6-Quart,Appliances,220,59.69,2,2023-03-22,Austin
+1464,Bookshelf 5-Tier Wood,Furniture,130,31.75,1,2024-04-04,Dallas
+1465,Denim Slim Jeans,Clothing,65,32.35,1,2023-03-22,Los Angeles
+1466,Hooded Fleece Sweatshirt,Clothing,45,16.42,1,2023-03-10,Detroit
+1467,Leather Recliner Armchair,Furniture,760,191.71,2,2023-01-13,Nashville
+1468,Classic Oxford Cotton Shirt,Clothing,55,25.48,1,2023-06-01,New York
+1469,Mineral Sunscreen SPF 50,Beauty,84,49.63,3,2023-10-20,San Diego
+1470,External SSD 1TB,Electronics,220,45.24,2,2024-04-29,Los Angeles
+1471,Blender Pro High-Speed,Appliances,180,54.26,2,2023-02-09,Atlanta
+1472,External SSD 1TB,Electronics,440,89.34,4,2024-01-17,Boston
+1473,External SSD 1TB,Electronics,330,114.14,3,2023-04-11,Boston
+1474,Matte Long-Wear Lipstick,Beauty,72,42.0,3,2023-11-25,Dallas
+1475,Minimalist Bedside Table,Furniture,225,90.32,3,2024-06-12,Nashville
+1476,Classic Oxford Cotton Shirt,Clothing,55,23.69,1,2024-06-02,Nashville
+1477,Classic Oxford Cotton Shirt,Clothing,55,28.46,1,2023-07-25,Minneapolis
+1478,USB-C Hub Multiport Adapter,Electronics,90,38.13,2,2023-10-08,Philadelphia
+1479,Coffee Maker Programmable,Appliances,150,45.88,2,2023-09-05,San Francisco
+1480,Matte Long-Wear Lipstick,Beauty,48,32.04,2,2023-12-25,Seattle
+1481,Bluetooth Portable Speaker,Electronics,60,23.74,1,2023-08-08,Dallas
+1482,Bluetooth Portable Speaker,Electronics,120,39.67,2,2023-01-10,San Francisco
+1483,Coffee Maker Programmable,Appliances,75,26.73,1,2023-11-09,Philadelphia
+1484,Waterproof Winter Jacket,Clothing,160,47.25,1,2024-04-22,Salt Lake City
+1485,Standing Desk Dual Motor,Furniture,420,103.9,1,2024-01-19,Boston
+1486,Mechanical Keyboard,Electronics,170,60.67,2,2023-12-11,Denver
+1487,Blender Pro High-Speed,Appliances,90,28.55,1,2023-06-03,Austin
+1488,Wool Blend Overcoat,Clothing,570,185.64,3,2024-02-18,Chicago
+1489,Robotic Vacuum Cleaner,Appliances,260,59.42,1,2024-03-04,Charlotte
+1490,Electric Kettle Fast-Boil,Appliances,120,40.0,3,2023-12-18,Portland
+1491,Exfoliating Body Scrub,Beauty,26,16.07,1,2023-11-04,San Francisco
+1492,External SSD 1TB,Electronics,110,33.97,1,2023-09-22,San Francisco
+1493,Organic Herbal Shampoo,Beauty,44,20.98,2,2023-08-16,Boston
+1494,Filing Cabinet 3-Drawer,Furniture,95,28.97,1,2023-10-29,Austin
+1495,Athletic Running Shoes,Clothing,190,68.45,2,2023-03-14,New York
+1496,Waterproof Winter Jacket,Clothing,320,82.59,2,2024-02-28,Los Angeles
+1497,Organic Herbal Shampoo,Beauty,22,9.74,1,2024-04-13,San Francisco
+1498,Waterproof Winter Jacket,Clothing,160,-3.4,1,2023-07-01,Dallas
+1499,Denim Slim Jeans,Clothing,130,51.73,2,2023-06-12,Seattle
+1500,Bluetooth Portable Speaker,Electronics,120,38.75,2,2024-02-18,Chicago

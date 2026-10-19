@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Dashboard Using Data Visualization | Executive Analytics</title>
+    <meta name="description" content="A comprehensive, interactive sales analytics dashboard with data science pipeline, automated insights, real-time filters, geographic mapping, and AI business analyst.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+    
+    <!-- Leaflet CSS & JS for Interactive Map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Custom Dashboard Styles -->
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+</head>
+<body>
+    <div class="app-layout">
+        <!-- Top Navigation Bar -->
+        <header class="top-nav">
+            <div class="nav-brand">
+                <div class="brand-icon">
+                    <i data-lucide="bar-chart-3"></i>
+                </div>
+                <div class="brand-text">
+                    <h1>Sales Dashboard <span class="badge-accent">Data Visualization</span></h1>
+                    <p class="brand-subtitle">Executive Performance Analytics &amp; Decision Intelligence</p>
+                </div>
+            </div>
+
+            <div class="nav-status-group">
+                <div class="db-status-badge" id="dbStatusBadge" title="SQLite Live Database Connected">
+                    <span class="status-dot"></span>
+                    <span id="dbRecordCountText">Database: 500 Records</span>
+                </div>
+            </div>
+
+            <div class="nav-actions">
+                <button class="btn btn-secondary" id="btnOpenShareModal" title="Share or Save Dashboard Snapshot">
+                    <i data-lucide="share-2"></i>
+                    <span>Share Snapshot</span>
+                </button>
+                <button class="btn btn-secondary" id="btnOpenUploadModal" title="Upload Custom CSV or Excel">
+                    <i data-lucide="upload-cloud"></i>
+                    <span>Upload CSV</span>
+                </button>
+                <button class="btn btn-primary" id="btnOpenAiModal" title="AI Sales Analyst Assistant">
+                    <i data-lucide="sparkles"></i>
+                    <span>AI Analyst</span>
+                </button>
+                <button class="btn btn-icon" id="btnOpenAddOrderModal" title="Add New Order Record">
+                    <i data-lucide="plus"></i>
+                </button>
+                <button class="btn btn-icon" id="btnThemeToggle" title="Toggle Light / Dark Mode">
+                    <i data-lucide="sun" id="themeIcon"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="main-container">
+            <!-- Filter & Control Toolbar -->
+            <section class="filter-panel card glass-card">
+                <div class="filter-header">
+                    <div class="filter-title">
+                        <i data-lucide="sliders-horizontal"></i>
+                        <span>Interactive Global Filters</span>
+                        <span class="badge-count" id="activeFilterCountBadge">All Data</span>
+                    </div>
+                    
+                    <!-- Quick Date Presets -->
+                    <div class="date-presets" id="datePresetsContainer">
+                        <button class="preset-btn active" data-preset="all">All Time</button>
+                        <button class="preset-btn" data-preset="2024">2024</button>
+                        <button class="preset-btn" data-preset="2023">2023</button>
+                        <button class="preset-btn" data-preset="q1_2024">Q1 2024</button>
+                        <button class="preset-btn" data-preset="q2_2024">Q2 2024</button>
+                        <button class="preset-btn" data-preset="last90">Last 90 Days</button>
+                    </div>
+
+                    <div class="filter-header-actions">
+                        <button class="btn btn-sm btn-ghost" id="btnResetFilters" title="Clear all active filters">
+                            <i data-lucide="rotate-ccw"></i>
+                            <span>Reset Filters</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="filter-controls-grid">
+                    <!-- Date Range -->
+                    <div class="filter-group">
+                        <label for="filterStartDate"><i data-lucide="calendar"></i> Start Date</label>
+                        <input type="date" id="filterStartDate" class="form-input">
+                    </div>
+                    <div class="filter-group">
+                        <label for="filterEndDate"><i data-lucide="calendar"></i> End Date</label>
+                        <input type="date" id="filterEndDate" class="form-input">
+                    </div>
+
+                    <!-- Category -->
+                    <div class="filter-group">
+                        <label for="filterCategory"><i data-lucide="tag"></i> Category</label>
+                        <select id="filterCategory" class="form-select">
+                            <option value="All">All Categories</option>
+                        </select>
+                    </div>
+
+                    <!-- Product -->
+                    <div class="filter-group">
+                        <label for="filterProduct"><i data-lucide="package"></i> Product Name</label>
+                        <select id="filterProduct" class="form-select">
+                            <option value="All">All Products</option>
+                        </select>
+                    </div>
+
+                    <!-- Region / Location -->
+                    <div class="filter-group">
+                        <label for="filterLocation"><i data-lucide="map-pin"></i> Customer Location</label>
+                        <select id="filterLocation" class="form-select">
+                            <option value="All">All Locations</option>
+                        </select>
+                    </div>
+
+                    <!-- Region Filter -->
+                    <div class="filter-group">
+                        <label for="filterRegion"><i data-lucide="compass"></i> Region</label>
+                        <select id="filterRegion" class="form-select">
+                            <option value="All">All Regions</option>
+                        </select>
+                    </div>
+
+                    <!-- Min Sales Amount -->
+                    <div class="filter-group range-group">
+                        <div class="range-header">
+                            <label for="filterMinSales"><i data-lucide="dollar-sign"></i> Min Sales</label>
+                            <span class="range-val" id="filterMinSalesVal">$0</span>
+                        </div>
+                        <input type="range" id="filterMinSales" class="form-range" min="0" max="2000" step="25" value="0">
+                    </div>
+
+                    <!-- Min Profit Margin % -->
+                    <div class="filter-group range-group">
+                        <div class="range-header">
+                            <label for="filterMinMargin"><i data-lucide="percent"></i> Min Margin</label>
+                            <span class="range-val" id="filterMinMarginVal">Any</span>
+                        </div>
+                        <input type="range" id="filterMinMargin" class="form-range" min="-10" max="60" step="5" value="-10">
+                    </div>
+
+                    <!-- Search Box -->
+                    <div class="filter-group search-group">
+                        <label for="filterSearchInput"><i data-lucide="search"></i> Search Records</label>
+                        <div class="input-with-icon">
+                            <i data-lucide="search" class="input-icon"></i>
+                            <input type="text" id="filterSearchInput" class="form-input" placeholder="Search order ID, product, city...">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Active Filter Tags Ribbon -->
+                <div class="active-chips-ribbon" id="activeChipsRibbon"></div>
+            </section>
+
+            <!-- KPI Cards Row -->
+            <section class="kpi-grid">
+                <!-- Total Sales -->
+                <div class="kpi-card card glass-card">
+                    <div class="kpi-top">
+                        <span class="kpi-label">Total Sales</span>
+                        <div class="kpi-icon icon-emerald"><i data-lucide="dollar-sign"></i></div>
+                    </div>
+                    <div class="kpi-value" id="kpiTotalSales">$0.00</div>
+                    <div class="kpi-bottom">
+                        <span class="kpi-delta delta-up" id="kpiSalesGrowth">
+                            <i data-lucide="trending-up"></i> +0.0%
+                        </span>
+                        <span class="kpi-subtext">vs. previous period</span>
+                    </div>
+                </div>
+
+                <!-- Total Profit -->
+                <div class="kpi-card card glass-card">
+                    <div class="kpi-top">
+                        <span class="kpi-label">Total Profit</span>
+                        <div class="kpi-icon icon-indigo"><i data-lucide="wallet"></i></div>
+                    </div>
+                    <div class="kpi-value" id="kpiTotalProfit">$0.00</div>
+                    <div class="kpi-bottom">
+                        <span class="kpi-delta delta-up" id="kpiProfitGrowth">
+                            <i data-lucide="trending-up"></i> +0.0%
+                        </span>
+                        <span class="kpi-subtext">vs. previous period</span>
+                    </div>
+                </div>
+
+                <!-- Total Orders -->
+                <div class="kpi-card card glass-card">
+                    <div class="kpi-top">
+                        <span class="kpi-label">Total Orders</span>
+                        <div class="kpi-icon icon-cyan"><i data-lucide="shopping-cart"></i></div>
+                    </div>
+                    <div class="kpi-value" id="kpiTotalOrders">0</div>
+                    <div class="kpi-bottom">
+                        <span class="kpi-delta delta-neutral" id="kpiOrdersGrowth">
+                            <i data-lucide="activity"></i> +0.0%
+                        </span>
+                        <span class="kpi-subtext">filtered transactions</span>
+                    </div>
+                </div>
+
+                <!-- Total Customers -->
+                <div class="kpi-card card glass-card">
+                    <div class="kpi-top">
+                        <span class="kpi-label">Active Customers</span>
+                        <div class="kpi-icon icon-amber"><i data-lucide="users"></i></div>
+                    </div>
+                    <div class="kpi-value" id="kpiTotalCustomers">0</div>
+                    <div class="kpi-bottom">
+                        <span class="kpi-badge badge-info">20 Metro Markets</span>
+                        <span class="kpi-subtext">across 4 regions</span>
+                    </div>
+                </div>
+
+                <!-- Total Quantity Sold -->
+                <div class="kpi-card card glass-card">
+                    <div class="kpi-top">
+                        <span class="kpi-label">Quantity Sold</span>
+                        <div class="kpi-icon icon-violet"><i data-lucide="boxes"></i></div>
+                    </div>
+                    <div class="kpi-value" id="kpiTotalQuantity">0</div>
+                    <div class="kpi-bottom">
+                        <span class="kpi-delta delta-up" id="kpiQtyGrowth">
+                            <i data-lucide="trending-up"></i> +0.0%
+                        </span>
+                        <span class="kpi-subtext">units fulfilled</span>
+                    </div>
+                </div>
+
+                <!-- Average Profit Margin -->
+                <div class="kpi-card card glass-card">
+                    <div class="kpi-top">
+                        <span class="kpi-label">Profit Margin</span>
+                        <div class="kpi-icon icon-rose"><i data-lucide="pie-chart"></i></div>
+                    </div>
+                    <div class="kpi-value" id="kpiProfitMargin">0.0%</div>
+                    <div class="kpi-bottom">
+                        <span class="kpi-badge badge-success" id="kpiMarginHealthBadge">Healthy (&gt;25%)</span>
+                        <span class="kpi-subtext">(Profit / Sales) × 100</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Dynamic Automated Insights Section -->
+            <section class="insights-section">
+                <div class="section-title-bar">
+                    <div class="section-title-left">
+                        <i data-lucide="lightbulb" class="icon-accent"></i>
+                        <h2>Automated Business Insights &amp; Anomaly Detection</h2>
+                    </div>
+                    <span class="insights-tag">Data-Driven Heuristics</span>
+                </div>
+                <div class="insights-grid" id="insightsContainer">
+                    <!-- Populated dynamically via JS -->
+                </div>
+            </section>
+
+            <!-- Chart Row 1: Monthly Sales Trend & Category Share -->
+            <section class="dashboard-row grid-2-1">
+                <!-- Monthly Sales Trend Line Chart -->
+                <div class="chart-card card glass-card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <i data-lucide="trending-up" class="icon-primary"></i>
+                            <h3>Monthly Sales &amp; Profit Trend</h3>
+                        </div>
+                        <div class="chart-actions">
+                            <div class="chart-toggle-group" id="trendMetricToggle">
+                                <button class="toggle-btn active" data-metric="combo">Sales &amp; Profit</button>
+                                <button class="toggle-btn" data-metric="sales">Sales Only</button>
+                                <button class="toggle-btn" data-metric="profit">Profit Only</button>
+                                <button class="toggle-btn" data-metric="orders">Orders</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div id="chartMonthlyTrend" class="chart-canvas"></div>
+                    </div>
+                </div>
+
+                <!-- Category Share Donut Chart -->
+                <div class="chart-card card glass-card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <i data-lucide="pie-chart" class="icon-indigo"></i>
+                            <h3>Category Share (% of Sales)</h3>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div id="chartCategoryShare" class="chart-canvas"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Chart Row 2: Region-wise Interactive Map & Category Bar Chart -->
+            <section class="dashboard-row grid-1-1">
+                <!-- Region-wise Sales Map & Drill-Down -->
+                <div class="chart-card card glass-card map-card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <i data-lucide="map" class="icon-emerald"></i>
+                            <h3>Geographic Sales &amp; Regional Drill-Down</h3>
+                        </div>
+                        <div class="map-legend">
+                            <span class="legend-item"><span class="legend-dot dot-cyan"></span> High Sales</span>
+                            <span class="legend-item"><span class="legend-dot dot-emerald"></span> High Margin (&gt;30%)</span>
+                        </div>
+                    </div>
+                    <div class="card-body map-body">
+                        <div id="geoMap" class="map-canvas"></div>
+                        <div class="region-stats-overlay" id="regionStatsOverlay">
+                            <!-- Populated dynamically with region pills -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sales & Profit by Category Bar Chart -->
+                <div class="chart-card card glass-card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <i data-lucide="bar-chart-2" class="icon-violet"></i>
+                            <h3>Sales &amp; Profit by Category</h3>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div id="chartCategoryBar" class="chart-canvas"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Chart Row 3: Top Products Leaderboard -->
+            <section class="dashboard-row grid-1">
+                <div class="chart-card card glass-card">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <i data-lucide="award" class="icon-amber"></i>
+                            <h3>Top Products Performance Leaderboard</h3>
+                        </div>
+                        <div class="chart-actions">
+                            <div class="btn-group">
+                                <label class="control-label">Rank by:</label>
+                                <select id="topProductsSort" class="form-select-sm">
+                                    <option value="sales">Revenue ($)</option>
+                                    <option value="profit">Profit ($)</option>
+                                    <option value="quantity">Quantity Sold</option>
+                                    <option value="margin">Profit Margin (%)</option>
+                                </select>
+                            </div>
+                            <div class="btn-group">
+                                <label class="control-label">Show:</label>
+                                <button class="toggle-btn-sm active" data-limit="5">Top 5</button>
+                                <button class="toggle-btn-sm" data-limit="10">Top 10</button>
+                                <button class="toggle-btn-sm" data-limit="20">Top 20</button>
+                                <button class="toggle-btn-sm" data-limit="0">All</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div id="chartTopProducts" class="chart-canvas"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Transaction Data Table Section -->
+            <section class="table-section card glass-card">
+                <div class="card-header table-header-flex">
+                    <div class="card-title-group">
+                        <i data-lucide="database" class="icon-cyan"></i>
+                        <h3>Sales Transaction Records</h3>
+                        <span class="badge-total" id="tableRecordCountBadge">0 Records</span>
+                    </div>
+                    <div class="table-actions">
+                        <button class="btn btn-secondary btn-sm" id="btnExportCSV">
+                            <i data-lucide="download"></i>
+                            <span>Export Filtered CSV</span>
+                        </button>
+                        <div class="page-size-selector">
+                            <label for="tablePageSize">Rows:</label>
+                            <select id="tablePageSize" class="form-select-sm">
+                                <option value="10" selected>10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <table class="data-table" id="salesDataTable">
+                        <thead>
+                            <tr>
+                                <th data-sort="Order ID" class="sortable">Order ID <i data-lucide="arrow-up-down"></i></th>
+                                <th data-sort="Product Name" class="sortable">Product Name <i data-lucide="arrow-up-down"></i></th>
+                                <th data-sort="Category" class="sortable">Category <i data-lucide="arrow-up-down"></i></th>
+                                <th data-sort="Sales Amount" class="sortable text-right">Sales Amount ($) <i data-lucide="arrow-up-down"></i></th>
+                                <th data-sort="Profit" class="sortable text-right">Profit ($) <i data-lucide="arrow-up-down"></i></th>
+                                <th data-sort="Profit Margin" class="sortable text-right">Profit Margin <i data-lucide="arrow-up-down"></i></th>
+                                <th data-sort="Quantity Sold" class="sortable text-center">Quantity Sold <i data-lucide="arrow-up-down"></i></th>
+                                <th data-sort="Order Date" class="sortable">Order Date <i data-lucide="arrow-up-down"></i></th>
+                                <th data-sort="Customer Location" class="sortable">Customer Location <i data-lucide="arrow-up-down"></i></th>
+                            </tr>
+                        </thead>
+                        <tbody id="salesTableBody">
+                            <!-- Populated dynamically via JS -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Table Pagination Footer -->
+                <div class="table-pagination">
+                    <div class="pagination-info" id="paginationInfo">Showing 1 to 10 of 500 records</div>
+                    <div class="pagination-controls">
+                        <button class="btn btn-sm btn-icon" id="btnFirstPage" title="First Page"><i data-lucide="chevrons-left"></i></button>
+                        <button class="btn btn-sm btn-icon" id="btnPrevPage" title="Previous Page"><i data-lucide="chevron-left"></i></button>
+                        <span class="page-indicator" id="pageIndicator">Page 1 of 50</span>
+                        <button class="btn btn-sm btn-icon" id="btnNextPage" title="Next Page"><i data-lucide="chevron-right"></i></button>
+                        <button class="btn btn-sm btn-icon" id="btnLastPage" title="Last Page"><i data-lucide="chevrons-right"></i></button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <div class="footer-content">
+                <p>Sales Dashboard Using Data Visualization &bull; Built with Python, Pandas, SQLite, Plotly &amp; Leaflet</p>
+                <div class="footer-links">
+                    <span class="status-online"><span class="status-dot"></span> Backend API Active</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- AI Sales Analyst Drawer Modal -->
+    <div class="modal-backdrop" id="aiModalBackdrop">
+        <div class="modal-dialog ai-drawer">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <div class="ai-avatar"><i data-lucide="bot"></i></div>
+                    <div>
+                        <h3>AI Sales Analyst</h3>
+                        <p class="modal-subtitle">Context-aware Natural Language Sales Intelligence</p>
+                    </div>
+                </div>
+                <button class="modal-close" id="btnCloseAiModal"><i data-lucide="x"></i></button>
+            </div>
+            <div class="modal-body ai-body">
+                <!-- Suggested Quick Prompts -->
+                <div class="ai-suggestions-bar">
+                    <span class="suggestion-label">Suggested:</span>
+                    <button class="ai-pill-btn" data-query="Give me an executive summary">Executive Summary</button>
+                    <button class="ai-pill-btn" data-query="What is our best product?">Best Product</button>
+                    <button class="ai-pill-btn" data-query="Which category has highest margin?">Profit Margins</button>
+                    <button class="ai-pill-btn" data-query="Show me anomalies or negative profit items">Anomalies &amp; Losses</button>
+                    <button class="ai-pill-btn" data-query="Forecast sales trend for next month">Forecast Trend</button>
+                    <button class="ai-pill-btn" data-query="How are sales in the West region?">Regional Breakdown</button>
+                </div>
+
+                <!-- Chat Messages Scroll Container -->
+                <div class="ai-chat-thread" id="aiChatThread">
+                    <div class="ai-message msg-assistant">
+                        <div class="msg-bubble">
+                            <p>Hello! I am your <strong>AI Sales Analyst</strong>. I continuously analyze the active data slices, calculate profit margins, detect revenue anomalies, and predict performance trends. Ask me anything about your current sales data or click one of the suggested prompts above!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer ai-footer">
+                <form id="aiQueryForm" class="ai-input-form">
+                    <input type="text" id="aiQueryInput" class="form-input" placeholder="Ask AI: 'Why did sales drop?', 'Compare Electronics vs Furniture'..." autocomplete="off">
+                    <button type="submit" class="btn btn-primary" id="btnSendAiQuery">
+                        <i data-lucide="send"></i>
+                        <span>Ask AI</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Upload Dataset Modal -->
+    <div class="modal-backdrop" id="uploadModalBackdrop">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <i data-lucide="upload-cloud" class="icon-accent"></i>
+                    <div>
+                        <h3>Upload Custom Sales Dataset</h3>
+                        <p class="modal-subtitle">Import CSV or Excel files with automated data pipeline cleaning</p>
+                    </div>
+                </div>
+                <button class="modal-close" id="btnCloseUploadModal"><i data-lucide="x"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="upload-dropzone" id="uploadDropzone">
+                    <i data-lucide="file-spreadsheet" class="dropzone-icon"></i>
+                    <h4>Drag and drop your sales dataset file here</h4>
+                    <p>Supports .csv, .xlsx, .xls (Up to 16MB)</p>
+                    <input type="file" id="fileInput" accept=".csv, .xlsx, .xls" class="hidden-file-input">
+                    <button type="button" class="btn btn-secondary" id="btnBrowseFile">Browse File</button>
+                    <div class="selected-file-info" id="selectedFileInfo"></div>
+                </div>
+
+                <div class="dataset-requirements-card">
+                    <h5><i data-lucide="info"></i> Required Schema Columns</h5>
+                    <div class="req-chips">
+                        <span class="chip">Order ID</span>
+                        <span class="chip">Product Name</span>
+                        <span class="chip">Category</span>
+                        <span class="chip">Sales Amount</span>
+                        <span class="chip">Profit</span>
+                        <span class="chip">Quantity Sold</span>
+                        <span class="chip">Order Date</span>
+                        <span class="chip">Customer Location</span>
+                    </div>
+                    <p class="req-note">Missing columns will be flagged. Dates, duplicates, and location spellings are cleaned automatically.</p>
+                </div>
+
+                <div class="upload-mode-toggle">
+                    <label><input type="radio" name="uploadMode" value="replace" checked> Replace current dataset</label>
+                    <label><input type="radio" name="uploadMode" value="append"> Append to existing dataset</label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-ghost" id="btnRestoreDefaultData">
+                    <i data-lucide="refresh-cw"></i> Restore Default 500 Records
+                </button>
+                <div class="footer-btn-right">
+                    <button class="btn btn-secondary" id="btnCancelUpload">Cancel</button>
+                    <button class="btn btn-primary" id="btnSubmitUpload" disabled>
+                        <i data-lucide="check"></i> Ingest &amp; Update Dashboard
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Share Dashboard / Snapshot Modal -->
+    <div class="modal-backdrop" id="shareModalBackdrop">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <i data-lucide="share-2" class="icon-accent"></i>
+                    <div>
+                        <h3>Share Dashboard Snapshot</h3>
+                        <p class="modal-subtitle">Generate a reproducible permalink with current filters applied</p>
+                    </div>
+                </div>
+                <button class="modal-close" id="btnCloseShareModal"><i data-lucide="x"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="shareSnapshotTitle">Snapshot Title</label>
+                    <input type="text" id="shareSnapshotTitle" class="form-input" value="Executive Sales Analysis - Q1 2024">
+                </div>
+                <div class="form-group">
+                    <label for="shareSnapshotNotes">Analytical Notes (Optional)</label>
+                    <textarea id="shareSnapshotNotes" class="form-input" rows="3" placeholder="Add commentary regarding performance trends, high margin categories, or regional highlights..."></textarea>
+                </div>
+                <div class="share-link-box" id="shareLinkBox" style="display: none;">
+                    <label>Shareable Snapshot URL:</label>
+                    <div class="input-with-action">
+                        <input type="text" id="shareUrlInput" class="form-input" readonly>
+                        <button class="btn btn-secondary" id="btnCopyShareUrl"><i data-lucide="copy"></i> Copy</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="btnPrintDashboard"><i data-lucide="printer"></i> Print / PDF</button>
+                <button class="btn btn-primary" id="btnGenerateShareLink"><i data-lucide="link"></i> Create Shareable Link</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Order Modal -->
+    <div class="modal-backdrop" id="addOrderModalBackdrop">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <i data-lucide="plus-circle" class="icon-accent"></i>
+                    <div>
+                        <h3>Record New Transaction</h3>
+                        <p class="modal-subtitle">Inserts order into SQLite and updates dashboard metrics live</p>
+                    </div>
+                </div>
+                <button class="modal-close" id="btnCloseAddOrderModal"><i data-lucide="x"></i></button>
+            </div>
+            <form id="addOrderForm">
+                <div class="modal-body">
+                    <div class="form-grid-2">
+                        <div class="form-group">
+                            <label for="newProdName">Product Name *</label>
+                            <input type="text" id="newProdName" class="form-input" required placeholder="e.g. Wireless Mouse">
+                        </div>
+                        <div class="form-group">
+                            <label for="newCategory">Category *</label>
+                            <select id="newCategory" class="form-select" required>
+                                <option value="Electronics">Electronics</option>
+                                <option value="Furniture">Furniture</option>
+                                <option value="Appliances">Appliances</option>
+                                <option value="Clothing">Clothing</option>
+                                <option value="Beauty">Beauty</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-grid-3">
+                        <div class="form-group">
+                            <label for="newSalesAmount">Sales Amount ($) *</label>
+                            <input type="number" id="newSalesAmount" class="form-input" step="0.01" min="1" required placeholder="120.00">
+                        </div>
+                        <div class="form-group">
+                            <label for="newProfit">Profit ($) *</label>
+                            <input type="number" id="newProfit" class="form-input" step="0.01" required placeholder="35.00">
+                        </div>
+                        <div class="form-group">
+                            <label for="newQuantity">Quantity Sold *</label>
+                            <input type="number" id="newQuantity" class="form-input" min="1" value="1" required>
+                        </div>
+                    </div>
+                    <div class="form-grid-2">
+                        <div class="form-group">
+                            <label for="newOrderDate">Order Date *</label>
+                            <input type="date" id="newOrderDate" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="newLocation">Customer Location *</label>
+                            <select id="newLocation" class="form-select" required>
+                                <option value="Chicago">Chicago</option>
+                                <option value="Austin">Austin</option>
+                                <option value="Seattle">Seattle</option>
+                                <option value="New York">New York</option>
+                                <option value="Los Angeles">Los Angeles</option>
+                                <option value="San Francisco">San Francisco</option>
+                                <option value="Dallas">Dallas</option>
+                                <option value="Atlanta">Atlanta</option>
+                                <option value="Denver">Denver</option>
+                                <option value="Boston">Boston</option>
+                                <option value="Miami">Miami</option>
+                                <option value="Phoenix">Phoenix</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="btnCancelAddOrder">Cancel</button>
+                    <button type="submit" class="btn btn-primary"><i data-lucide="check"></i> Save Order</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Scripts -->
+    <script src="/static/js/api.js"></script>
+    <script src="/static/js/charts.js"></script>
+    <script src="/static/js/table.js"></script>
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
